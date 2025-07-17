@@ -279,28 +279,25 @@
 
     renderTable();
   </script>
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+<script>
   const firebaseConfig = {
-    apiKey: "AIzaSyATZh7KNyPP95F2ACASPxT_-cHJUtp27UE",
-    authDomain: "tat-tracker-bd5f9.firebaseapp.com",
-    projectId: "tat-tracker-bd5f9",
-    storageBucket: "tat-tracker-bd5f9.firebasestorage.app",
-    messagingSenderId: "573468623165",
-    appId: "1:573468623165:web:46326a94ad85f24f3e8554",
-    measurementId: "G-JC56DGB1X9"
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "XXXXXXXXXX",
+    appId: "YOUR_APP_ID"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
 </script>
+
 </body>
 </html>
